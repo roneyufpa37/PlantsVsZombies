@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="MobileGamer" Database="">
+  <Project Name="PlantsVsZombies" Path="PlantsVsZombies.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="PlantsVsZombies" ConfigName="Debug"/>
+      <Project Name="PlantsVsZombies" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="PlantsVsZombies" ConfigName="Release"/>
+      <Project Name="PlantsVsZombies" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
