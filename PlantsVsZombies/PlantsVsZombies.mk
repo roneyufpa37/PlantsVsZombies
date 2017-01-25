@@ -5,15 +5,15 @@
 ## Debug
 ProjectName            :=PlantsVsZombies
 ConfigurationName      :=Debug
-WorkspacePath          :=C:/Users/roney/Documents/MobileGamer/PlantsVsZombies/Game
-ProjectPath            :=C:/Users/roney/Documents/MobileGamer/PlantsVsZombies/Game
+WorkspacePath          :=C:/Users/roney/Documents/GitHub/PlantsVsZombies
+ProjectPath            :=C:/Users/roney/Documents/GitHub/PlantsVsZombies
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=roney
-Date                   :=22/01/2017
+Date                   :=25/01/2017
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=clang++
 SharedObjectLinkerName :=clang++ -shared -fPIC
@@ -62,7 +62,7 @@ AS       := llvm-as
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/PlantsVsZombies_main.c$(ObjectSuffix) $(IntermediateDirectory)/PlantsVsZombies_Plants.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlantsVsZombies_Zombies.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IntermediateDirectory)/Plants.cpp$(ObjectSuffix) $(IntermediateDirectory)/Zombies.cpp$(ObjectSuffix) 
 
 
 
@@ -93,20 +93,20 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/PlantsVsZombies_main.c$(ObjectSuffix): ../../GitHub/MobileGamer/PlantsVsZombies/main.c 
-	$(CC) $(SourceSwitch) "C:/Users/roney/Documents/MobileGamer/GitHub/MobileGamer/PlantsVsZombies/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/PlantsVsZombies_main.c$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/PlantsVsZombies_main.c$(PreprocessSuffix): ../../GitHub/MobileGamer/PlantsVsZombies/main.c
-	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/PlantsVsZombies_main.c$(PreprocessSuffix) "../../GitHub/MobileGamer/PlantsVsZombies/main.c"
+$(IntermediateDirectory)/main.c$(ObjectSuffix): main.c 
+	$(CC) $(SourceSwitch) "C:/Users/roney/Documents/GitHub/PlantsVsZombies/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/main.c$(PreprocessSuffix): main.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.c$(PreprocessSuffix) "main.c"
 
-$(IntermediateDirectory)/PlantsVsZombies_Plants.cpp$(ObjectSuffix): ../../GitHub/MobileGamer/PlantsVsZombies/Plants.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/roney/Documents/MobileGamer/GitHub/MobileGamer/PlantsVsZombies/Plants.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/PlantsVsZombies_Plants.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/PlantsVsZombies_Plants.cpp$(PreprocessSuffix): ../../GitHub/MobileGamer/PlantsVsZombies/Plants.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/PlantsVsZombies_Plants.cpp$(PreprocessSuffix) "../../GitHub/MobileGamer/PlantsVsZombies/Plants.cpp"
+$(IntermediateDirectory)/Plants.cpp$(ObjectSuffix): Plants.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/roney/Documents/GitHub/PlantsVsZombies/Plants.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Plants.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Plants.cpp$(PreprocessSuffix): Plants.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Plants.cpp$(PreprocessSuffix) "Plants.cpp"
 
-$(IntermediateDirectory)/PlantsVsZombies_Zombies.cpp$(ObjectSuffix): ../../GitHub/MobileGamer/PlantsVsZombies/Zombies.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/roney/Documents/MobileGamer/GitHub/MobileGamer/PlantsVsZombies/Zombies.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/PlantsVsZombies_Zombies.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/PlantsVsZombies_Zombies.cpp$(PreprocessSuffix): ../../GitHub/MobileGamer/PlantsVsZombies/Zombies.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/PlantsVsZombies_Zombies.cpp$(PreprocessSuffix) "../../GitHub/MobileGamer/PlantsVsZombies/Zombies.cpp"
+$(IntermediateDirectory)/Zombies.cpp$(ObjectSuffix): Zombies.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/roney/Documents/GitHub/PlantsVsZombies/Zombies.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Zombies.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Zombies.cpp$(PreprocessSuffix): Zombies.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Zombies.cpp$(PreprocessSuffix) "Zombies.cpp"
 
 ##
 ## Clean
