@@ -5,13 +5,11 @@ public:
     int getDia();
     int getMes();
     int getAno();
-    void setDia();    
+    void setDia();
     void setMes();
     void setAno();
 private:
     int Dia, Mes, Ano;
-}
-    ~Data()
-    {
-    }
+};
+
 
