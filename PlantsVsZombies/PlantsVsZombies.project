@@ -96,5 +96,6 @@
     <File Name="main.c"/>
     <File Name="Zombies.cpp"/>
     <File Name="Zombies.h"/>
+    <File Name="Data.h"/>
   </VirtualDirectory>
 </CodeLite_Project>

@@ -1,8 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session Name="C:\Users\roney\Documents\GitHub\PlantsVsZombies\MobileGamer.workspace">
-  <int Value="0" Name="m_selectedTab"/>
-  <wxString Value="C:\Users\roney\Documents\GitHub\PlantsVsZombies\MobileGamer.workspace" Name="m_workspaceName"/>
-  <TabInfoArray Name="TabInfoArray"/>
+<Session Name="C:\Users\FACOMP\git\PlantsVsZombies\PlantsVsZombies\MobileGamer.workspace">
+  <int Value="2" Name="m_selectedTab"/>
+  <wxString Value="C:\Users\FACOMP\git\PlantsVsZombies\PlantsVsZombies\MobileGamer.workspace" Name="m_workspaceName"/>
+  <TabInfoArray Name="TabInfoArray">
+    <TabInfo>
+      <wxString Value="C:\Users\FACOMP\git\PlantsVsZombies\PlantsVsZombies\Zombies.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\FACOMP\git\PlantsVsZombies\PlantsVsZombies\Zombies.h" Name="FileName"/>
+      <int Value="18" Name="FirstVisibleLine"/>
+      <int Value="31" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\FACOMP\git\PlantsVsZombies\PlantsVsZombies\main.c" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="14" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\FACOMP\git\PlantsVsZombies\PlantsVsZombies\Data.h" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="12" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+  </TabInfoArray>
   <SerializedObject Name="m_breakpoints">
     <long Value="1" Name="Count"/>
     <SerializedObject Name="Breakpoint0">
