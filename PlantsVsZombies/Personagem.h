@@ -9,6 +9,8 @@ public :
     Personagem(Personagem &);
     bool vivo();
     int valor();
+    void addpersonagens( const string &, const int);
+    
 private:
     string namepersonagem;
     bool vivo;
