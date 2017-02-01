@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1485786719 source:c:\users\facomp\git\zombies\main.cpp
+	<iostream>
+	"Zombies.h"
+	"Data.h"
+
+1485786905 c:\users\facomp\git\zombies\zombies.h
+	<string>
+
+1485785411 c:\users\facomp\git\zombies\data.h
+
+1485786893 source:c:\users\facomp\git\zombies\zombies.cpp
+	"Zombies.h"
+	<iostream>
+
