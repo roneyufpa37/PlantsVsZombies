@@ -1,4 +1,27 @@
 #include "personagem.h"
+#include <iostream>
+
+using std::cout;
+using std::cin;
+using std::endl;
+using std::ostream;
+
+ostream &operator<<(ostream &output, const Personagem &personagem)
+{
+   output << personagem.qtd << personagem.vivo << personagem.nomePersonagem << endl;
+   return output;
+}
+
+bool Personagem::operator = (const Personagem &personagem) const
+{
+    if (sizeof != personagem.sizeof)
+        return false;
+        for (int = 0 ; i<sizeof; i++)
+            if ( ptr[i] != right.ptr[i] )
+                return false;
+                
+             return true;   
+}
 
 Personagem::Personagem()
 {

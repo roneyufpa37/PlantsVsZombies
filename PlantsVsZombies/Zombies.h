@@ -1,17 +1,24 @@
 #ifndef ZOMBIES_H
 #define ZOMBIES_H
 #include <string>
+#include <ostream>
 
-using std::string;
+using std::cout;
+using std::cin;
+using std::endl;
+using std::ostream;
 
 class Zombies
 {
+    friend ostream &operator<<( ostream &, const Zombies &);
+    
 public:
 	Zombies();
     Zombies(const string &);
 	Zombies(const Zombies &);
-
-   void Messageinital() const;
+    const Zombies &operator=( const Zombies &);
+    
+   void Messageinitial() const;
 
    string getName() const;
    void setName(string);
@@ -27,7 +34,7 @@ private:
    string name;
    int speed;
    static int numZombies;
-   const static int MaxDeZombies = 50;
+   const static int maxDeZombies = 50;
 };
 
 #endif

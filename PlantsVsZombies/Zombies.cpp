@@ -4,14 +4,14 @@
 using std::cout;
 using std::cin;
 using std::endl;
-
+using std::ostream;
 
 int Zombies::numZombies = 0;
 int MaxDeZombies=50;
 
 Zombies::Zombies()
 {
-    this->name = "Case Case";
+    this->name = "Jorge";
 }
 
 void Zombies::Messageinital() const
@@ -33,7 +33,22 @@ string Zombies::getName() const
     return this->name;
 }
 
-/*
+ostream &operator<<(ostream &output, const Zombies &zombieobject)
+{
+   output << zombiesobject.name << zombiesobject.speed << zombiesobject.numZombies << zombiesobject.maxZombies << endl;
+   return output;
+}
+
+bool Zombies::operator= (const Zombies &zombies) const
+{
+    if (sizeof != zombies.sizeof)
+        return false;
+        for (int = 0 ; i<sizeof; i++)
+            if ( ptr[i] != right.ptr[i] )
+                return false;
+                
+             return true;   
+}
 
 void setName(string);
 void setSpeed(int);

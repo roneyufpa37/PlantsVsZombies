@@ -7,7 +7,8 @@
 #define PERSONAGEM_H
 #include <stdio.h>
 #include <string>
-aa
+#include <ostream>
+
 using std::string;
 using std::cout;
 using std::endl;
@@ -18,6 +19,10 @@ public:
 	  Personagem();
 	  Personagem(const Personagem &, int);
 	  Personagem(const Personagem &);
+      
+      friend ostream &operator<<( ostream &, const Zombies &);
+       const Personagem &operator=( const Personagem &);
+       
 	  void anda();
 	  void preco();
 	  void addPersonagens(const string &);
