@@ -10,11 +10,9 @@ using std::string;
 int main()
 {
     Zombies z;
-
-    //Data d1(30,01,2017);
-    //cout << d1 << endl;
-    //cout<< Mensagem.Messagebeggin() << endl;
-
+    Data d1 (1,2,2017);
+    
     cout << "Numero total de Zumbis" << z.getName() << endl;
+    cout << d1 << endl;
 	return 0;
 }
