@@ -98,5 +98,7 @@
     <File Name="../../Personagem.h"/>
     <File Name="../../Zombies.cpp"/>
     <File Name="../../Zombies.h"/>
+    <File Name="Data.cpp"/>
+    <File Name="Data.h"/>
   </VirtualDirectory>
 </CodeLite_Project>
