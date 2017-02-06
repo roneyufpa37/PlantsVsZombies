@@ -11,23 +11,22 @@ using std::ostream;
 class Zombies
 {
     friend ostream &operator<<( ostream &, const Zombies &);
-    
+
 public:
 	Zombies();
     Zombies(const string &);
 	Zombies(const Zombies &);
     const Zombies &operator=( const Zombies &);
-    
+
    void Messageinitial() const;
 
-   string getName() const;
-   void setName(string);
-   void setSpeed(int);
-   int getSpeed();
+   string getname() const;
+   void setname(string);
+   void setspeed(int);
+   int getspeed();
    static int getnumZombies();
-
-		bool dance();
-		bool jump();
+   bool life();
+   int moviment();
 
 
 private:

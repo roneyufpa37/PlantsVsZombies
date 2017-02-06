@@ -33,50 +33,66 @@ string Zombies::getName() const
     return this->name;
 }
 
-ostream &operator<<(ostream &output, const Zombies &name, int speed, int numZombies, int maxZombies)
+ostream &operator<<(ostream &output, const Zombies &z)
 {
-   this->name = name;
-   this->speed=speed;
-   this->numZombies= numZombies;
-   output << Zombies.name << Zombies.speed << Zombies.speed << Zombies.maxZombies << endl;
+   output << z.name << z.qtd<< z.speed << z.maxZombies << endl;
    return output;
-    
+
 }
 
-bool Zombies::operator= (const Zombies &zombies) const
+const Zombies &operator= (const Zombies &z)
 {
-    if (sizeof != zombies.sizeof)
-        return false;
-        for (int = 0 ; i<sizeof; i++)
-            if ( ptr[i] != right.ptr[i] )
-                return false;
-                
-             return true;   
+    this->nomePersonagem = z.nomePersonagem;
+    this->qtd = z.qtd;
+    this->vivo = z.vivo;
+    this->speed = z.speed;
+    delete [] nomePersonagem;
+    this->nomePersonagem= new nomePersonagem[z.cout];
+
+    for(int i = 0; i < z.count; i++)
+        this->nomePersonagem[i] = z.nomePersonagem[i];
+
+    return *this;
 }
 
-void setName(string);
-void setSpeed(int);
-int getSpeed();
+
+void setname(string name);{
+this->name=name;
+}
+int getname(){
+return name;
+}
+void moviment();
+int moviment();
+static int setnumZombies();
 static int getnumZombies();
 
-bool dance();
-bool jump();
+Zombies::lives(){
+if (numZombies>0)
+    return True;
+else
+    return False;
+}
+Zombies::moviment(){
+    int opcao;
+    cout << " Digite o valor da velocidade m/s" << endl;
+    cin >> speed;
 
-void Zombies::dance(){
-    if(true){
-        cout<<"This dance"<<endl;
+    switch(speed){
+        case 1:
+            cout << "Muito lento" << endl;
+        case 2:
+            cout << "Lento" << endl;
+        case 3:
+            cout << "Normal" << endl;
+        case 4:
+            cout << "Rapido" << endl;
+        case 5:
+            cout <<"Muito Rapido" << endl;
+        default
+            cout << "Opcao invalida" <<endl;
     }
-    else{
-         cout<<"This not dance"<<endl;
-    }
+
+
 }
 
-Zombies::jump(){
-  if(true){
-	  cout<<"This jump"<<endl;
- }
- else{
-	 cout<<"This not jump"<<endl;
-  }
-}
-*/

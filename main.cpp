@@ -1,18 +1,11 @@
 #include <iostream>
 #include "Zombies.h"
-#include "Data.h"
 
-using std::cout;
-using std::endl;
-using std::string;
-
+using namespace std;
+Zombies zombies;
 
 int main()
 {
-    Zombies z;
-    Data d1 (1,2,2017);
-    
-    cout << "Numero total de Zumbis" << z.getName() << endl;
-    cout << d1 << endl;
-	return 0;
+    Zombies.Messageinitial();
+    return 0;
 }
