@@ -67,7 +67,7 @@ void anda()
 	  else
 	    cout << "Personagem saiu do jogo" << endl;
 }
-void preco(){
+void verificacao(){
 	cout << "Quantos personagens tem?"
 	cin << qtd << endl;
 	if (qtd>0 && qtd<=25)
