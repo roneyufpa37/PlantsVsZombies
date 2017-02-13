@@ -26,8 +26,6 @@ public:
    int getSpeed();
    static int getnumZombies();
 
-
-
 private:
    string name;
    int speed;
