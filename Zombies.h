@@ -25,8 +25,8 @@ public:
    void setspeed(int);
    int getspeed();
    static int getnumZombies();
-   bool life();
-   int moviment();
+   bool dance();
+   int attack();
 
 
 private:
