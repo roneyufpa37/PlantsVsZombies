@@ -33,7 +33,7 @@ private:
    string name;
    int speed;
    static int numZombies;
-   const static int maxDeZombies = 50;
+   const static int maxDeZombies;
 };
 
 #endif
