@@ -24,7 +24,7 @@ public:
        const Personagem &operator=( const Personagem &);
        
 	  void anda();
-	  void preco();
+	  void verificacao();
 	  void addPersonagens(const string &);
 
 private:
