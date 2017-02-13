@@ -59,24 +59,3 @@ void setSpeed(int);
 int getSpeed();
 static int getnumZombies();
 
-bool dance();
-bool jump();
-
-void Zombies::dance(){
-    if(true){
-        cout<<"This dance"<<endl;
-    }
-    else{
-         cout<<"This not dance"<<endl;
-    }
-}
-
-Zombies::jump(){
-  if(true){
-	  cout<<"This jump"<<endl;
- }
- else{
-	 cout<<"This not jump"<<endl;
-  }
-}
-*/
