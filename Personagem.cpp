@@ -6,12 +6,9 @@ using std::cin;
 using std::endl;
 using std::ostream;
 
-ostream &operator<<(ostream &output, const Personagem &qtd, bool vivo, string nomePersonagem)
+ostream &operator<<(ostream &output, const Personagem &p)
 {
-   this->qtd = qtd;
-   this->vivo=vivo;
-   this->nomePersonagem= nomePersonagem;
-   output << Personagem.qtd << Persongaem.vivo << Persongaem.nomePersonagem << endl;
+   output << p.qtd << p.vivo << p.nomePersonagem << endl;
    return output;
 
 }
