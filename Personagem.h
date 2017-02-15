@@ -37,7 +37,7 @@ public:
 
 private:
       int qtd;
-	  bool vivo;
+      bool vivo;
       string *nomePersonagem;
 };
 
