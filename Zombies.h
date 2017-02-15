@@ -13,11 +13,14 @@ class Zombies
     friend ostream &operator<<( ostream &, const Zombies &);
 
 public:
-	Zombies();
+    Zombies();
     Zombies(const string &);
-	Zombies(const Zombies &);
-    const Zombies &operator=( const Zombies &);
-
+    Zombies(const Zombies &);
+	
+	
+     const Zombies &operator=( const Zombies &);
+     const Zombies &operator= (const Zombies &z)
+	     
    void Messageinitial() const;
 
    string getname() const;
