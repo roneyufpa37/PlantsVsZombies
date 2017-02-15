@@ -16,11 +16,17 @@ public:
     Zombies();
     Zombies(const string &);
     Zombies(const Zombies &);
-	
-	
+
+
      const Zombies &operator=( const Zombies &);
-     const Zombies &operator= (const Zombies &z)
-	     
+     const Zombies &operator= (const Zombies &z);
+     bool operator == ( const Zombies &) const;
+     bool operator != (const Zombies &name) const
+     {
+         return ! (*this == name);
+     }
+
+
    void Messageinitial() const;
 
    string getname() const;
@@ -37,6 +43,8 @@ private:
    int speed;
    static int numZombies;
    const static int maxDeZombies;
+   int size;
+   int *pont;
 };
 
 #endif

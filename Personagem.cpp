@@ -13,7 +13,7 @@ ostream &operator<<(ostream &output, const Personagem &qtd, bool vivo, string no
    this->nomePersonagem= nomePersonagem;
    output << Personagem.qtd << Persongaem.vivo << Persongaem.nomePersonagem << endl;
    return output;
-    
+
 }
 
 bool Personagem::operator = (const Personagem &personagem) const
@@ -23,10 +23,24 @@ bool Personagem::operator = (const Personagem &personagem) const
         for (int = 0 ; i<sizeof; i++)
             if ( ptr[i] != right.ptr[i] )
                 return false;
-                
-             return true;   
+
+             return true;
+}
+bool Personagem::operator== (const Personagem &name) const
+{
+ if (size != name.size)
+    return false;
+ for (int = 0 ; i < size, i++)
+    if ( pont[i] != name.pont[i])
+        return false;
+
+    return true;
 }
 
+bool operator!= (const Personagem &name) const;
+{
+    return ! (*this == name);
+}
 Personagem::Personagem()
 {
     nomePersonagem = "nenhum";
@@ -45,15 +59,15 @@ Personagem::Personagem(const Personagem &personagem)
 void Personagem::addPersonagens(const string &nome)
 {
 	string *aux = new string[qtd];
-	
+
 	for (int i=0; i < qtd; i++)
 		aux[i] = nomePersonagem[i];
 		delete [] nomePersonagem;
-		
+
 		nomePersonagem = new string[++qtd];
-		
+
     for (int i = 0; i < qtd-1; i++)
-		nomePersonagem[i] = aux[i];		
+		nomePersonagem[i] = aux[i];
 		nomePersonagem[qtd-1] = nome;
 		delete [] aux;
 }
@@ -79,5 +93,5 @@ void verificacao(){
 }
 Personagem::~Personagem()
 {
-	
+
 }

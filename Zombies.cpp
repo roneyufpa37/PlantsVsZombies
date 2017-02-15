@@ -54,6 +54,21 @@ const Zombies &operator= (const Zombies &z)
 
     return *this;
 }
+bool Zombies::operator== (const Zombies &name) const
+{
+ if (size != name.size)
+    return false;
+ for (int = 0 ; i < size, i++)
+    if ( pont[i] != name.pont[i])
+        return false;
+
+    return true;
+}
+
+bool operator!= (const Zombies &name) const;
+{
+    return ! (*this == name);
+}
 
 
 void setname(string name);{

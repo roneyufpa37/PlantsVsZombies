@@ -1,3 +1,4 @@
+
 //Nova Classe chamada Personagem
 //1 construtor default, 1 construtor de copia e 1 outro construtor para a classe
 // Com dois atributos e dois metodos
@@ -19,10 +20,17 @@ public:
 	  Personagem();
 	  Personagem(const Personagem &, int);
 	  Personagem(const Personagem &);
-      
+
       friend ostream &operator<<( ostream &, const Zombies &);
-       const Personagem &operator=( const Personagem &);
-       
+      const Personagem &operator=( const Personagem &);
+      bool operator == ( const Zombies &) const;
+      bool operator != (const Personagem &name) const
+       {
+         return ! (*this == name);
+       }
+
+
+
 	  void anda();
 	  void verificacao();
 	  void addPersonagens(const string &);
