@@ -23,7 +23,7 @@ Personage::Personage()
 
 void Personage::Messageinitial()const
 {
-    cout << " Welcome the game!  " << endl;
+    cout << " In the Game!  " << endl;
 
 }
 
@@ -33,6 +33,18 @@ string getQuantiy()
 
 }
 
+void verification()
+{
+    cout << " This life?" << endl;
+    cin >> Personage.life >> endl;
+    if (Personage.life == life)
+        cout << "Life" << endl;
+    else if (Personage.life == dead)
+     cout << "Dead" << endl;
+    default
+    cout << "Option false" << endl;
+
+}
 
 
   // Memory allocation
@@ -52,8 +64,6 @@ const Personage &operator= (const Personage &Personage)
     return *this;
 }
 // add Personage
-// string namesPersonage;
-//string *listName;
 void Personage::addPersonage(const string &pessoa)
 {
     string *aux = new string[qtdPersonage];

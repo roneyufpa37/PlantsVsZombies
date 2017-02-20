@@ -21,11 +21,6 @@ Zombies::Zombies()
 
     numZombies++;
 }
-//member function for show message of welcome
-void Zombies::Messageinitial()const
-{
-    cout << "Zombies on the way  " << endl;
-}
 
 //return name Zombie
 string getName()
@@ -54,18 +49,18 @@ int Zombies::getNumZombies(){
   {
       cout << "Were it is if moviment" << endl;
       cin >> Zombies.walk >> endl;
-      if (Zombies.walk ==  earth)
-        cout << "terreste" << endl;
-      else if (Zombies.walk == aquatico)
-        cout << "aquatico" << endl;
+      if (Zombies.walk ==  Terrestrial)
+        cout << "Terrestrial" << endl;
+      else if (Zombies.walk == aquatic)
+        cout << "aquatic" << endl;
     default:
-        cout << "ashwer stronge" << endl;
+        cout << "Answer wrong" << endl;
   }
-   bool speed()
+   bool eats()
    {
-       cout << "tabela de velocidade" << endl;
+       cout << "Who much eats(Qtd)?" << endl;
        for (i=0;i<=4;i++){
-        cout << medidor[i] << endl;
+        cout << measurer[i] << endl;
        }
 
    }
@@ -93,6 +88,7 @@ const Zombies &operator= (const Zombies &Zombies)
 ostream &operator<<(ostream &output, const Zombies &Zombies)
 {
     output << "name: " << Zombies.name << "Speed: " << Zombies.speed << endl;
+    output << static_cast< Personage > (Zombies) << endl;
     return output;
 
 }
@@ -101,6 +97,7 @@ const Zombies &Zombies::operator= (const Zombies &Zombies)
 {
     this->namePersonage = Zombies.name;
     this->speed = Zombies.speed;
+    static_cast< Personage > (*this)  = static_cast < Personage >  (Zombie);
     return *this;
 }
 //implementation overload operator ==
@@ -110,10 +107,12 @@ bool Zombies::operator== (const Zombies &name) const
         return false;
     if (this->speed != Zombies.speed)
         return false;
+    if (static_cast < Personage> (*this) != static_cast <Personage> (Zombies))
     return true;
 }
 //implementation overload operator !=
 bool operator!= (const Zombies &name,&speed) const;
 {
     return ! (*this == name && *this == speed);
+    return ! static_cast <Personage> ((*this == name  ) &&  static_cast (*this == speed))
 }

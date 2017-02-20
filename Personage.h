@@ -33,8 +33,7 @@ public:
        }
         // Message welcome
         void Messageinitial()const;
-       //member function walk
-       void walking();
+
        // member function verification
        void verification();
        //member function for add Personages

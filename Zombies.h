@@ -36,7 +36,7 @@ public:
         return ! (*this == name);
     }
     //member function MessageInitial()
-    void Messageinitial() const;
+    virtual void Messageinitial() const;
     //return name Zombie
     string getName();
     //set name
@@ -46,7 +46,7 @@ public:
     //verification in what space it is moviment
     bool moviment();
     //verification if it is flying
-    bool fly();
+    bool eats();
 
 private:
     //name type string
@@ -60,7 +60,7 @@ private:
     // define an type int count;
     int count;
     //define a pointer`pont` of type int
-    int medidor[5];
+    int measurer[5];
 
 };
 
