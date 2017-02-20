@@ -1,50 +1,67 @@
-#ifndef ZOMBIES_H
-#define ZOMBIES_H
-#include <string>
-#include <ostream>
+#ifndef ZOMBIES_H_INCLUDED
+#define ZOMBIES_H_INCLUDED
+#include<string>
+#include<ostream>
+#include "Personage.h"
+#include "Date.h"
+
 
 using std::cout;
 using std::cin;
 using std::endl;
 using std::ostream;
 
-class Zombies
+class Zombies: public Personage
 {
-    friend ostream &operator<<( ostream &, const Zombies &);
-
+    //overload operator <<
+   friend ostream &operator<<(ostream &, const Zombies &);
 public:
+    //initiation default constructor
     Zombies();
+    //constructor
     Zombies(const string &);
+    //copy constructor
     Zombies(const Zombies &);
+    //destructor
+    ~Zombies();
 
-
-     const Zombies &operator=( const Zombies &);
-     const Zombies &operator= (const Zombies &z);
-     bool operator == ( const Zombies &) const;
-     bool operator != (const Zombies &name) const
-     {
-         return ! (*this == name);
-     }
-
-
-   void Messageinitial() const;
-
-   string getname() const;
-   void setname(string);
-   void setspeed(int);
-   int getspeed();
-   static int getnumZombies();
-   bool dance();
-   int attack();
-
+    //overload operator =
+    const Zombies &operator=(const Zombies &);
+    //overload operator ==
+    bool operator ==(const Zombies &name)const;
+    //overload operator !=
+    bool operator != (const Zombies &name) const
+    {
+        return ! (*this == name);
+    }
+    //member function MessageInitial()
+    void Messageinitial() const;
+    //return name Zombie
+    string getName();
+    //set name
+    void setName(string);
+    //information number Zombies
+    static int getNumZombies();
+    //verification in what space it is moviment
+    bool moviment();
+    //verification if it is flying
+    bool fly();
 
 private:
-   string name;
-   int speed;
-   static int numZombies;
-   const static int maxDeZombies;
-   int size;
-   int *pont;
+    //name type string
+    string name;
+    // walk type string
+    string walk;
+    // number zombies type static int
+    static int numZombies;
+    //define the number maximum of zombies:type const static int
+    const static int maxZombies;
+    // define an type int count;
+    int count;
+    //define a pointer`pont` of type int
+    int medidor[5];
+
 };
 
-#endif
+
+#endif // ZOMBIES_H_INCLUDED

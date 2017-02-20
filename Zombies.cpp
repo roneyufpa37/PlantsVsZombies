@@ -1,113 +1,100 @@
-#include "Zombies.h"
 #include <iostream>
+#include "Zombies.h"
+#include "Personage.h"
+#include "Date.h"
 
 using std::cout;
 using std::cin;
 using std::endl;
 using std::ostream;
 
-int Zombies::numZombies = 0;
-int MaxDeZombies=50;
+int Zombies::numZombies=0;
+int maxZombies =50;
 
+
+//implementation an initiation default constructor
 Zombies::Zombies()
 {
-    this->name = "Jorge";
-}
+    this->name = "";
+    this->speed= 0;
+    this->count = 0;
 
-void Zombies::Messageinital() const
+    numZombies++;
+}
+//member function for show message of welcome
+void Zombies::Messageinitial()const
 {
-	 cout<<"Welcome to the game" << endl;
+    cout << "Welcome to the game " << endl;
 }
 
-Zombies::Zombies(const string &Name){
-    this->name = name;
-}
-
-int Zombies::getnumZombies() {
-    return numZombies;
-}
-
-
-string Zombies::getName() const
+//return name Zombie
+string getName()
 {
-    return this->name;
+    return name;
 }
 
-ostream &operator<<(ostream &output, const Zombies &z)
+//set name Zombie
+void Zombies::setName(string name)
 {
-   output << z.name << z.qtd<< z.speed << z.maxZombies << endl;
-   return output;
-
+    if (name.length() <= 10)
+        Zombies.name = name;
+    if (name.length()>10)
+    {
+        Zombies.name = name.substr(0,10);
+        cout << "Name " << Zombies.name<< endl;
+    }
 }
 
-const Zombies &operator= (const Zombies &z)
+//return number Zombies
+int Zombies::getNumZombies(){
+      return numZombies;
+}
+  //verification in what space it is moviment
+  bool moviment()
+  {
+      cout << "Were it is if moviment" << endl;
+      cin >> Zombies.walk >> endl;
+      if (Zombies.walk ==  earth)
+        cout << "terreste" << endl;
+      else if (Zombies.walk == aquatico)
+        cout << "aquatico" << endl;
+    default:
+        cout << "ashwer stronge" << endl;
+  }
+   bool speed()
+   {
+       cout << "tabela de velocidade" << endl;
+       for (i=0;i<=4;i++){
+        cout << medidor[i] << endl;
+       }
+
+   }
+
+//implementation overload operator <<
+ostream &operator<<(ostream &output, const Zombies &Zombies)
 {
-    this->nomePersonagem = z.nomePersonagem;
-    this->qtd = z.qtd;
-    this->vivo = z.vivo;
-    this->speed = z.speed;
-    delete [] nomePersonagem;
-    this->nomePersonagem= new nomePersonagem[z.cout];
+    output << "name: " << Zombies.name << "Speed: " << Zombies.speed << endl;
+    return output;
 
-    for(int i = 0; i < z.count; i++)
-        this->nomePersonagem[i] = z.nomePersonagem[i];
-
+}
+//implementation overload operator =
+const Zombies &Zombies::operator= (const Zombies &Zombies)
+{
+    this->namePersonage = Zombies.name;
+    this->speed = Zombies.speed;
     return *this;
 }
+//implementation overload operator ==
 bool Zombies::operator== (const Zombies &name) const
 {
- if (size != name.size)
-    return false;
- for (int = 0 ; i < size, i++)
-    if ( pont[i] != name.pont[i])
+    if (this->name != Zombies.name)
         return false;
-
+    if (this->speed != Zombies.speed)
+        return false;
     return true;
 }
-
-bool operator!= (const Zombies &name) const;
+//implementation overload operator !=
+bool operator!= (const Zombies &name,&speed) const;
 {
-    return ! (*this == name);
+    return ! (*this == name && *this == speed);
 }
-
-
-void setname(string name);{
-this->name=name;
-}
-int getname(){
-return name;
-}
-void moviment();
-int moviment();
-static int setnumZombies();
-static int getnumZombies();
-
-Zombies::lives(){
-if (numZombies>0)
-    return True;
-else
-    return False;
-}
-Zombies::moviment(){
-    int opcao;
-    cout << " Digite o valor da velocidade m/s" << endl;
-    cin >> speed;
-
-    switch(speed){
-        case 1:
-            cout << "Muito lento" << endl;
-        case 2:
-            cout << "Lento" << endl;
-        case 3:
-            cout << "Normal" << endl;
-        case 4:
-            cout << "Rapido" << endl;
-        case 5:
-            cout <<"Muito Rapido" << endl;
-        default
-            cout << "Opcao invalida" <<endl;
-    }
-
-
-}
-
