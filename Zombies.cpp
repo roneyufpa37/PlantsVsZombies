@@ -24,7 +24,7 @@ Zombies::Zombies()
 //member function for show message of welcome
 void Zombies::Messageinitial()const
 {
-    cout << "Welcome to the game " << endl;
+    cout << "Zombies on the way  " << endl;
 }
 
 //return name Zombie
@@ -70,6 +70,25 @@ int Zombies::getNumZombies(){
 
    }
 
+
+
+   // Memory allocation
+const Zombies &operator= (const Zombies &Zombies)
+{
+    this->name = Zombies.name;
+    this->walk = Zombies.walk;
+    delete [] nomePersonagem;
+    this->name= new name[Zombies.cout];
+
+    for(int i = 0; i < Zombies.count; i++)
+        this->name[i] = Zombies.name[i];
+
+    for(int i = 0; i < Zombies.count; i++)
+        this->walk[i] = Zombies.walk[i];
+
+
+    return *this;
+}
 //implementation overload operator <<
 ostream &operator<<(ostream &output, const Zombies &Zombies)
 {

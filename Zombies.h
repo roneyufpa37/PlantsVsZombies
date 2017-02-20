@@ -24,7 +24,8 @@ public:
     Zombies(const Zombies &);
     //destructor
     ~Zombies();
-
+    // return th name of Zombies
+    string getName()
     //overload operator =
     const Zombies &operator=(const Zombies &);
     //overload operator ==
